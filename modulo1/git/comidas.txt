@@ -1,0 +1,10 @@
+1 sushi
+2 espaguete
+3 lasanha
+4 pizza
+5 tabule
+6 nhoque
+7 feijoada
+8 frango com quiabo
+9 vaca atolada
+10 angu a baiana
