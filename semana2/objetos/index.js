@@ -37,29 +37,29 @@
 
 
 //Exercício 2
-//const formulario = {
-//    nome: "Veronica",
-//    idade: 31,
-//    profissao: "Educadora Física"
-// }
+const formulario = {
+   nome: "Veronica",
+   idade: 31,
+   profissao: "Educadora Física"
+}
 
-// const formulario2 = {
-//    nome: "Pamela",
-//    idade: 32,
-//    profissao: "Telemarketing"
-// }
+const formulario2 = {
+   nome: "Pamela",
+   idade: 32,
+   profissao: "Telemarketing"
+}
 
-// function imprimeFuncao(info) {
-//    return [
-// info.nome,
-// info.nome.length,
-// info.idade,
-// info.profissao,
-// info.profissao.length
-// ]
-// }
-// console.log(imprimeFuncao(formulario))
-// console.log(imprimeFuncao(formulario2)) 
+function imprimeFuncao(info) {
+   return [
+info.nome,
+info.nome.length,
+info.idade,
+info.profissao,
+info.profissao.length
+]
+}
+console.log(imprimeFuncao(formulario))
+console.log(imprimeFuncao(formulario2)) 
 
 //Exercício 3
 //const carrinho = []
