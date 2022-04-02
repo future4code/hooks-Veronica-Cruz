@@ -1,0 +1,35 @@
+.corpo-site{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.menu{
+    display:grid;
+}
+
+.menu{
+    max-width: 300px;
+    border:2.5px solid #ccc
+}
+
+.fotos-menu{
+    display:flex;
+    flex-direction: row;
+    max-width: 40px;
+    max-height: 30px;
+}
+
+.cabeçalho{
+    background-color: mediumvioletred;
+}
+
+.corpo{
+    background-color: #f2d0e0;
+}
+
+.bolo-bonito{
+    width: 200px;
+    display:flex;
+    flex-direction:row
+}
+
