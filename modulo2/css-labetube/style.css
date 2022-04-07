@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: bisque;
+}
+
+.cabecalho{
+    background-color: orange;
+    display:flex;
+    justify-content: space-between;
+    margin:5px;
+    padding: 20px;
+}
+
+.cabecalho h1{
+    padding-left: 50px;
+    font: normal 40pt Arial;
+}
+
+.buscar-input{
+    width: 350px;
+    height: 40px;
+    font: normal 30px Arial;
+    text-align: center;
+    margin-right: 60px;
+    padding-right: 50px;
+    margin-top: 15px;
+    
+}
+
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.videos video{
+    width: 600px;
+    height: 1200px;
+}
+
+.videos h1{
+    font:normal 40px Arial;
+    text-align: center;
+    text-decoration: none;
+    background-color: coral;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal 30px Arial;
+}
+
