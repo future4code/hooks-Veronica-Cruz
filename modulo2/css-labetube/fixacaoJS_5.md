@@ -7,10 +7,7 @@
       { nome: "Pomba", classificacao: "ave" }
     ]
 
- let nomesBichos = (item) => {
-   return item.nome
- }
- let nomesAnimais=  animais.map(nomesBichos)=>{
-   return [nomesAnimais]
- }
+let apenasNomes = animais.map(nomeAnimal => nomeAnimal.nome);
+return apenasNomes
+  
 }```
