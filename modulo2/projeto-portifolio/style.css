@@ -1,0 +1,66 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blueviolet;
+}
+
+#menu-principal{
+    background-color: purple;
+}
+#menu-principal li{
+     display: inline;
+}
+
+#menu-principal li a{
+    
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-family:Arial; 
+    font-size: 2rem;
+    display: inline-block;
+    }
+
+#menu-principal li a:hover{
+    background-color: white;
+    color: purple;
+
+
+.minha-foto{
+    width: 300px;
+
+}
+.quem-sou-eu{
+    font-size: 2rem;
+    font-family:Arial;
+    text-align: center;
+    display: inline
+}
+.nome{
+    width: 200px;
+    font-size: 2rem;
+    font-family:Arial;
+    text-align: center;
+    padding: 30%;
+    display: inline
+    
+    
+}
+
+p{
+    font-size: 3rem;
+    font-family:Arial;
+}
+
+.onde-estudei{
+    font-size: 4rem;
+    font-family:Arial;
+    text-align: center;
+    background-color: blue;
+    display: inline
+}
+
