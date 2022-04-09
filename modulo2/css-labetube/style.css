@@ -5,7 +5,7 @@
 
 body{
     background-color: bisque;
-}
+    }
 
 .cabecalho{
     background-color: orange;
@@ -78,3 +78,14 @@ footer{
     font: normal 30px Arial;
 }
 
+@media screen and (max-width: 600px) {
+    header {
+        float: none;
+        width: 100%;
+        text-align: center;
+}
+    section {
+        display: flex;
+        
+    }
+}
