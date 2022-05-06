@@ -1,49 +1,77 @@
 
-let a = 10
-let b = 10
+// let a = 10
+// let b = 10
 
-console.log(10)
+// console.log(10)
 
-b = 5
-console.log(10, 5)
+// b = 5
+// console.log(10, 5)
 
-2-
-
-
-console.log(10, 20, c) //undefined pois c não tem valor atribuído
-
-3-
-
-let horasTrabalhadasDia = prompt("Quantas horas você trabalha por dia?")
-let valorRecebidoDia = prompt("Quanto você recebe por dia?")
-alert(`Voce recebe ${horasTrabalhadasDia/valorRecebidoDia} por hora`)
+// 2-
 
 
- let nome
- let idade
+// console.log(10, 20, c) //undefined pois c não tem valor atribuído
 
- console.log(typeof nome, typeof idade)
+// 3-
 
- //porque nenhum valor foi atribuído as variáveis
+// let horasTrabalhadasDia = prompt("Quantas horas você trabalha por dia?");
+// let valorRecebidoDia = prompt("Quanto você recebe por dia?");
+// alert(`Voce recebe ${valorRecebidoDia/horasTrabalhadasDia} por hora`);
 
- const nome = prompt("Qual seu nome?")
+//EXERCÍCIOS DE ESCRITA DE CÓDIGO:
 
- const idade = prompt("Qual sua idade?")
+//1-
+// A) let nome;
+// B) let idade;
 
- const nome = "Veronica"
- const idade = 31
- console.log("Olá!" nome, "você tem" idade, "anos.")
+//C) console.log(typeof nome, typeof idade)
 
-const comida = prompt("Você comeu sushi hoje?")
-const roupa = prompt("Você está usando blusa preta?")
-const atividadeFisica = prompt("Você foi na academia hoje?")
+//D) porque nenhum valor foi atribuído as variáveis
 
-const comida = "não"
-const roupa = "sim"
-const atividadeFisica = "sim"
+//E)
+//  const nome = prompt("Qual seu nome?")
 
-let a = 10
-let b = 25
-a = c
-b = a
-c = b
+//  const idade = Number(prompt("Qual sua idade?"))
+
+//F)
+//  console.log(typeof (nome))
+//  console.log(typeof (idade))
+
+//G)
+//  const nome = prompt("Qual o seu nome?")
+//  const idade = Number(prompt("Qual a sua idade?"))
+//  console.log(`Olá! ${nome} você tem ${idade} anos.`)
+
+//2-
+// const comida = "Você comeu sushi hoje?"
+// const roupa = "Você está usando blusa preta?"
+// const atividadeFisica = "Você foi na academia hoje?"
+
+//A)
+// const comiComida = "não"
+// const minhaRoupa = "sim"
+// const treinamento = "sim"
+//B)
+// console.log(comida, comiComida, roupa, minhaRoupa,atividadeFisica,treinamento)
+
+//3-
+
+// let a = 10
+// let b = 25
+
+// a= 25
+// b= 10
+
+// console.log("O novo valor de a é ", a)
+// console.log("O novo valor de b é" , b)
+//----------------------------------------------------------------------------------------------
+
+//DESAFIOS:
+
+//1-
+
+// const numero1 = Number(prompt("Digite um número"))
+// const numero2 = Number(prompt("Digite outro número"))
+
+// console.log("O primeiro número somado ao segundo número resulta em:", numero1+numero2)
+// console.log("O primeiro número multiplicado pelo segundo número resulta em:", numero1*numero2)

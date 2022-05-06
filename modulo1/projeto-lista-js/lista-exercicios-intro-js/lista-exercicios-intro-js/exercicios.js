@@ -1,26 +1,28 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
 
 // EXERCÍCIO 0A
-//function soma(num1, num2) {
-  // implemente sua lógica aqui
-  //return num1 + num2
-//}
+function soma(num1, num2) {
+ const num1 = 4
+ const num2 = 7
+ const somar = num1+num2
+  return somar
+}
+
 
 // EXERCÍCIO 0B
-//function imprimeMensagem() {
-  // implemente sua lógica aqui
-  //const mensagem = prompt('Digite uma mensagem!')
+function imprimeMensagem() {
+  
+  const mensagem = prompt('Digite uma mensagem!')
 
-  //console.log(mensagem)
-//}
+  console.log(mensagem)
+}
 
 // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
 // EXERCÍCIO 01
 function calculaAreaRetangulo(){
-  // implemente sua lógica aqui
- const pergunta1 = prompt("Insira um número")
- const pergunta2 = prompt("Insira um número maior que o anterior")
+ const altura = prompt("Insira um número")
+ const largura = prompt("Insira um número maior que o anterior")
  const area = altura * largura
  console.log(area)
 }
