@@ -11,31 +11,52 @@
 
 //exercicio 2
 
-const comidasPreferidas = ["sushi","lasanha","espaguete","maionese","frango assado"]
-console.log(comidasPreferidas)
-console.log("Essas são minhas comidas preferidas", comidasPreferidas[0])
-console.log(comidasPreferidas[1])
-console.log(comidasPreferidas[2])
-console.log(comidasPreferidas[3])
-console.log(comidasPreferidas[4])
+// const comidasPreferidas = ["sushi","lasanha","espaguete","maionese","frango assado"]
+// console.log(comidasPreferidas)
+// console.log("Essas são minhas comidas preferidas")
+// console.log(comidasPreferidas[0])
+// console.log(comidasPreferidas[1])
+// console.log(comidasPreferidas[2])
+// console.log(comidasPreferidas[3])
+// console.log(comidasPreferidas[4])
 
-const comidaUsuario = prompt("Qual sua comida preferida?")
-const novaComida = comidasPreferidas.replaceAll("lasanha", comidaUsuario.push)
-
-
+// comidasPreferidas[1] = prompt("Qual sua comida preferida?")
+// console.log(comidasPreferidas);
 
 
 //exercicio 3
 
-const listaDeTarefas = []
-//const tarefa1 = prompt("Você vai ao dentista?")
-listaDeTarefas.push(tarefa1)
-//const tarefa2 = prompt("Você vai a escola?")
-listaDeTarefas.push(tarefa2)
-//const tarefa3 = prompt("Você vai ao banco?")
-listaDeTarefas.push(tarefa3)
+// alert("Vamos fazer sua lista de tarefas do dia!")
 
-console.log(listaDeTarefas)
+// const listaDeTarefas = []
 
-//const tarefaRealizada = prompt("Digite o número da tarefa que realizou")
-listaDeTarefas.splice(2,1)
+// const tarefa1 = prompt("Digite a primeira tarefa do dia?")
+// listaDeTarefas.push(tarefa1)
+
+// const tarefa2 = prompt("Digite a segunda tarefa do dia?")
+// listaDeTarefas.push(tarefa2)
+
+// const tarefa3 = prompt("VDigite a terceira tarefa do dia?")
+// listaDeTarefas.push(tarefa3)
+
+// console.log(listaDeTarefas)
+
+// const tarefaRealizada = prompt("Digite o número da tarefa que realizou")
+// listaDeTarefas.splice(2,1)
+
+//DESAFIOS
+
+// EXERCÍCIO 01
+
+// const frase = prompt("Digite uma frase")
+// console.log([frase])
+
+// EXERCÍCIO 02
+
+const frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"]
+
+console.log(frutas)
+
+const indiceAbacaxi = frutas.indexOf("Abacaxi")
+
+console.log("O índice da fruta Abacaxi é", indiceAbacaxi, "e o tamanho desse array é", frutas.length)
