@@ -5,30 +5,40 @@
 
 //exercicio 2
 
+
 // Ele precisa colocar o Number() no prompt para os valores serem convertidos pra números na soma.
 // Nesse caso será impresso um número após o outro e não a soma. Se o usuário inserir 2 e 2 por exemplo,
 //irá imprimir 22 ao invés de 4 que seria o resultado da soma nesse caso.
 
 //exercicio 3
+=======
+// Faltou converter os valores pedidos ao usuário em Number, para que o número seja lido como number no código.
 
-// let primeiroNumero = Number(prompt('Digite um número'))
-// let segundoNumero = Number(prompt('Digite outro número'))
-// let soma = primeiroNumero + segundoNumero
+//exercicio 3
+// let primeiroNumero = Number(prompt("Digite um numero!"))
+// let segundoNumero = Number(prompt("Digite outro numero!"))
+
+// const soma = primeiroNumero + segundoNumero
+
 // console.log(soma)
+
 
 //EXERCÍCIOS DE ESCRITADE CÓDIGO
 
 //exercicio 1
 
+
 //a)
 
 // const idade = Number(prompt("Qual sua idade?"))
+
 
 //b)
 
 // const idadeAmigo = Number(prompt("Qual a idade do seu melhor amigo?"))
 
 //c)
+
 
 // console.log("Sua idade é maior que a do seu melhor amigo?", idade>idadeAmigo)
 
@@ -46,6 +56,8 @@
 //c) O resto da divisão por 2 sempre dá 0, então independente do número que inserir será igual a 0.
 
 //d) O resultado sempre será 0.5, pois o número ímpar dividido por 2 sempre resta 1 e 1 dividido por 2 é 0.5.
+=======
+
 
 // exercicio 3
 
@@ -146,8 +158,6 @@ const valorXic = Number(prompt("Insira quantas xícaras deseja converter em litr
 const converteXicemLi = valorXic/3.5.toFixed()
 
 console.log(valorXic,"xic equivalem a",converteXicemLi,"l")
-
-
 
 
 
