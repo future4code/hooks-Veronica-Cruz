@@ -1,8 +1,11 @@
 // exercícios de interpretação de código
+
 //exercicio 1 - "a" array vazio ; "b" resulta em null ; "c" length: 10 ; "d,e,f" undefined 
+
 //exercicio 2 - "SUBI NUM ONIBUS EM MIRROCOS" 27
 
 //exercícios de escrita de código
+
 //exercicio 1
 
 //const nomeDoUsuario = prompt("Digite seu nome")
@@ -10,6 +13,7 @@
 //console.log(`O email ${emailDoUsuario} foi cadastrado com sucesso. Seja bem-vindo; ${nomeDoUsuario} !`)
 
 //exercicio 2
+
 
 // const comidasPreferidas = ["sushi","lasanha","espaguete","maionese","frango assado"]
 // console.log(comidasPreferidas)
@@ -23,8 +27,9 @@
 // comidasPreferidas[1] = prompt("Qual sua comida preferida?")
 // console.log(comidasPreferidas);
 
-
-//exercicio 3
+// <<<<<<< strings-arrays
+// //exercicio 3
+// =======
 
 // alert("Vamos fazer sua lista de tarefas do dia!")
 
@@ -55,8 +60,10 @@
 
 const frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"]
 
+
 console.log(frutas)
 
 const indiceAbacaxi = frutas.indexOf("Abacaxi")
 
 console.log("O índice da fruta Abacaxi é", indiceAbacaxi, "e o tamanho desse array é", frutas.length)
+=======

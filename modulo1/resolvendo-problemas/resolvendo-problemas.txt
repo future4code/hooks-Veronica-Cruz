@@ -1,0 +1,18 @@
+Aula - Resolvendo Problemas
+7 Passos Esssenciais para Resolver Problemas:
+Passo 1 - Ter atenção no enunciado e ler com atenção o que se pede. 
+Passo 2 - Filtrar as informações importantes e o principal objetivo a ser atingido.
+Passo 3 - Pensar em quais possíveis respostas e formas de fazer o código são possíveis.
+Passo 4 - Fazer um esquema visual por fluxograma, algo que represente como estamos entendendo e como 
+podemos passar aquela informação pro computador. Também quais termos podemos utilizar.
+Passo 5 - Cria o código da forma como imaginamos, elaborando a estrutura dele mesmo que não fique apresentável 
+inicialmente. A idéia é passar o que já temos em mente e depois irmos reajustando caso haja necessidade.
+Passo 6 - Testar o código feito, verificar o que está dando certo ou não e pensar agora nas possíveis correções.
+Passo 7 - Refatorar, ou seja, corrigir e deixar mais claro todas as partes do código que for possível melhorar
+seu entendimento e visualização.
+Esses passos são fundamentais e particularmente me ajudou muito a entender como pensar na lógica que irei utilizar, 
+pois ficou mais fácil de organizar por onde começar e encaixar o objetivo do enunciado na prática.
+Mesmo que não gravamos todos os termos de uma vez, mas só de entender o objetivo do que se quer fazer e ter uma linha 
+de racionínio a ser seguida, para então pensar nas soluções do problema, já nos dá uma direção para criar os
+comandos necessários.
+

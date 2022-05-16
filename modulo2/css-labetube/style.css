@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: bisque;
+    }
+
+.cabecalho{
+    background-color: orange;
+    display:flex;
+    justify-content: space-between;
+    margin:5px;
+    padding: 20px;
+}
+
+.cabecalho h1{
+    padding-left: 50px;
+    font-family: cursive;
+    font-size: 60px;
+}
+
+.buscar-input{
+    width: 350px;
+    height: 40px;
+    font: normal 30px Arial;
+    text-align: center;
+    margin-right: 60px;
+    padding-right: 50px;
+    margin-top: 15px;
+    
+}
+
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 35px;
+   
+}
+
+.videos video{
+    background-color: black;
+    width: 600px;
+    height: 550px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+.videos h1{
+    font-family: cursive;
+    font-size: 45px;
+    text-align: center;
+    text-decoration: none;
+    background-color: orange;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    padding: 10px;
+    margin-bottom: 60px;
+}
+
+.videos a{
+    text-decoration: none;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal 30px Arial;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        float: none;
+        width: 100%;
+        text-align: center;
+}
+    section {
+        display: flex;
+        
+    }
+}
