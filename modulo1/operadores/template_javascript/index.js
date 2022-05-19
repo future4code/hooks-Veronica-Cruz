@@ -1,9 +1,17 @@
-//exercicios de interpretação de código
+//EXERCÍCIOS DE INTERPRETAÇÃO DE CÓDIGO
 
 // exercicio 1
 // a - false b- false c- true d- boolean
 
 //exercicio 2
+
+
+// Ele precisa colocar o Number() no prompt para os valores serem convertidos pra números na soma.
+// Nesse caso será impresso um número após o outro e não a soma. Se o usuário inserir 2 e 2 por exemplo,
+//irá imprimir 22 ao invés de 4 que seria o resultado da soma nesse caso.
+
+//exercicio 3
+=======
 // Faltou converter os valores pedidos ao usuário em Number, para que o número seja lido como number no código.
 
 //exercicio 3
@@ -14,11 +22,16 @@
 
 // console.log(soma)
 
-//exercicios de escrita de codigo
+
+//EXERCÍCIOS DE ESCRITADE CÓDIGO
 
 //exercicio 1
-//a) 
+
+
+//a)
+
 // const idade = Number(prompt("Qual sua idade?"))
+
 
 //b)
 
@@ -26,158 +39,131 @@
 
 //c)
 
-// console.log("Sua idade é maior que a do seu melhor amigo?")
-// console.log(idade>idadeAmigo === true)
+
+// console.log("Sua idade é maior que a do seu melhor amigo?", idade>idadeAmigo)
 
 //d)
-// const diminui = idade - idadeAmigo
-// console.log(diminui)
+// const diferencaDeIdade = idade - idadeAmigo
+// console.log(diferencaDeIdade)
 
 //exercicio 2
 
-//a)
-// const numero = Number(prompt("Insira um número par"))
+// const numero = prompt("Insira um número par")
 
-//b)
-// const restoDaDivisao = numero % 2
+// const restoDaDivisao = numero % 2/2
+// console.log(restoDaDivisao)
 
-// const resultado = restoDaDivisao/2
-//
-// console.log(resultado)
+//c) O resto da divisão por 2 sempre dá 0, então independente do número que inserir será igual a 0.
 
-//c) O resto da divisão por 2 sempre será 0 pois o numero é par e tem como valor 0.
+//d) O resultado sempre será 0.5, pois o número ímpar dividido por 2 sempre resta 1 e 1 dividido por 2 é 0.5.
+=======
 
-//d) O resultado permanece 0.5 pra todo número ímpar.
 
 // exercicio 3
 
-
-/*const idadeAnos =  prompt("Quantos anos você tem?")
-console.log(idadeAnos * 12, "meses")
-console.log(idadeAnos * 365,"dias")
-console.log(idadeAnos * 8760,"horas")
+// const idadeAnos =  prompt("Quantos anos você tem?")
+// console.log(idadeAnos * 12, "meses")
+// console.log(idadeAnos * 365,"dias")
+// console.log(idadeAnos * 8760,"horas")
 
 //exercicio 4
-*/ 
-// const primeiroNum = Number(prompt("Insira um número"))
-// const segundoNum = Number(prompt("Insira outro número"))
-// console.log(primeiroNum > segundoNum, "O primeiro é maior que o segundo")
-// console.log(primeiroNum == segundoNum, "O primeiro é igual ao segundo")
-// console.log(primeiroNum % segundoNum == 0, "O primeiro é divisível pelo segundo")
-// console.log(segundoNum % primeiroNum == 0, "O segundo é divisível pelo primeiro")
 
-//----------------------------------------------------------------------------------------
+// const primeiroNum = prompt("Insira um número")
+// const segundoNum = prompt("Insira outro número")
+// console.log("O primeiro é maior que o segundo",primeiroNum > segundoNum)
+// console.log("O primeiro é igual ao segundo",primeiroNum == segundoNum)
+// console.log("O primeiro é divisível pelo segundo",primeiroNum % segundoNum == 0)
+// console.log("O segundo é divisível pelo primeiro",segundoNum % primeiroNum == 0)
 
-//DESAFIOS:
+//DESAFIOS
 
-//1-
+//- Graus Fahrenheit(°F) para Kelvin(K)
+  
+// (KELVIN) = (GRAUS_FAHRENHEIT - 32)*(5/9) + 273.15
 
-//A)
-// const GRAUS_FAHRENHEIT = 77
-// const KELVIN = (GRAUS_FAHRENHEIT - 32)*(5/9) + 273.15
+// - Graus Celsius(°C) para Graus Fahrenheit (°C)
 
-// console.log(KELVIN, "Kelvin")
+// (GRAUS_FAHRENHEIT) = (GRAUS_CELSIUS)*(9/5) + 32
 
-//B)
+//Exercicio 1
 
-// const GRAUS_CELSIUS = 80
+// GRAUS_FAHRENHEIT = 77
+// const converteFaEmKel = (GRAUS_FAHRENHEIT - 32)*(5/9) + 273.15
+// console.log(converteFaEmKel, "K")
 
-// const GRAUS_FAHRENHEIT = (GRAUS_CELSIUS)*(9/5) + 32
+// GRAUS_CELSIUS = 80
+// const converteCelEmFa = (GRAUS_FAHRENHEIT) = (GRAUS_CELSIUS)*(9/5) + 32
+// console.log(converteCelEmFa, "°F")
 
-// console.log(GRAUS_FAHRENHEIT, "Fahrenheit")
+// GRAUS_CELSIUS = 30
+// const converteCelemFah = (GRAUS_CELSIUS)*(9/5) + 32
+// console.log(converteCelemFah, "°F")
 
-//C)
+// const converteFahEmKel = (converteCelemFah - 32)*(5/9) + 273.15
+// console.log(converteFahEmKel, "K")
 
-// const GRAUS_CELSIUS = 30
+// const converteCelUser = Number(prompt("Insira o número em Celsius que deseja converter"))
+// const converteCelemFah = (converteCelUser)*(9/5) + 32
+// console.log(converteCelemFah, "°F")
 
-// const GRAUS_FAHRENHEIT = (GRAUS_CELSIUS)*(9/5) + 32
+// const converteFahEmKel = (converteCelemFah - 32)*(5/9) + 273.15
+// console.log(converteFahEmKel, "K")
 
-// const KELVIN = (GRAUS_FAHRENHEIT - 32)*(5/9) + 273.15
+//Exercicio 2
 
-// console.log(GRAUS_FAHRENHEIT, "Fahrenheit")
+// const quiloWattHora = 0.05
+// const quiloWattCasa = 280
+// const resultadoGasto = quiloWattCasa*quiloWattHora
+// console.log("O valor a ser pago da sua conta de luz é",resultadoGasto)
 
-// console.log(KELVIN, "Kelvin")
+// const descontoEnergia = (quiloWattCasa*quiloWattHora)*0.15
+// const resultadoEnergia = resultadoGasto-descontoEnergia
+// console.log("Você ganhou um desconto de 15%! O valor a ser pago é",resultadoEnergia )
 
-//D)
+//Exercício 3
 
-// const GRAUS_CELSIUS = Number(prompt("Quantos Celsius?"))
-
-// const GRAUS_FAHRENHEIT = (GRAUS_CELSIUS)*(9/5) + 32
-
-// const KELVIN = (GRAUS_FAHRENHEIT - 32)*(5/9) + 273.15
-
-// console.log(GRAUS_FAHRENHEIT, "Fahrenheit")
-
-// console.log(KELVIN, "Kelvin")
-
-//2-
-
-//A)
-
-// const quilowattHora = 280
-
-// const consumoEnergia = quilowattHora * 0.05
-
-// const contaDeLuz = consumoEnergia * 24
-
-// console.log("Sua conta ficou em", contaDeLuz, "reais")
-
-//B)
-
-// const descontoEnergia = contaDeLuz - (contaDeLuz * 0.15)
-
-// console.log("Eba! Te demos um desconto de 15% e sua conta agora será apenas" , descontoEnergia)
-
-//3-
-
-//A)
 // const valorLibra = 20
+// const converteLbEmKg = valorLibra/2.2.toFixed()
 
-// const conversao = valorLibra * 0.453592
+// console.log ("20lb equivalem a",converteLbEmKg, "Kg")
 
-// console.log("20lb equivalem a", conversao, "kg!")
-
-//B)
 // const valorOz = 10.5
+// const converteOzemKg = valorOz/35.27.toFixed()
 
-// const conversao2 = valorOz * 0.0283495
+// console.log("10,5Oz equivalem a",converteOzemKg,"Kg")
 
-// console.log("10.5oz equivalem a", conversao2, "kg!")
 
-//C)
 // const valorMi = 100
+// const converteMiemMe = valorMi*1609
 
-// const conversao3 = valorMi * 1609.34
+// console.log("100Mi equivalem a",converteMiemMe,"m")
 
-// console.log("100mi equivalem a", conversao3, "m!")
 
-//D)
 // const valorFt = 50
+// const converteFtemMe = valorFt/3.3.toFixed()
 
-// const conversao4 = valorFt * 0.3047992424196
+// console.log("50ft equivalem a",converteFtemMe,"m")
 
-// console.log("50ft equivalem a", conversao4, "m!")
-
-//E)
 // const valorGal = 103.56
+// const converteGalemLi = valorGal*3.78.toFixed()
 
-// const conversao5 = valorGal * 3.78541
+// console.log("103.56gal equivalem a",converteGalemLi,"l")
 
-// console.log("103.56gal equivalem a", conversao5, "l!")
-
-//F)
 // const valorXic = 450
+// const converteXicemLi = valorXic/3.5.toFixed()
 
-// const conversao6 = valorXic * 0.284130466089248
+// console.log("450xic equivalem a",converteXicemLi,"l")
 
-// console.log("450 xic equivalem a", conversao6, "l!")
+const valorXic = Number(prompt("Insira quantas xícaras deseja converter em litros"))
+const converteXicemLi = valorXic/3.5.toFixed()
 
-//G)
-const valorLb = Number(prompt("Insira quantas libras você converter em KG"))
+console.log(valorXic,"xic equivalem a",converteXicemLi,"l")
 
-const conversao7 = valorLb * 0.453592
 
-console.log("São", conversao7, "kg!")
+
+
+
+
 
 
 
