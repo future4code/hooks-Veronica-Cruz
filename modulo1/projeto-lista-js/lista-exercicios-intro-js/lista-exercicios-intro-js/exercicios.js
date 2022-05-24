@@ -2,7 +2,7 @@
 
 // EXERCÍCIO 0A
 function soma(num1, num2) {
- 
+
   return num1 + num2
 }
 
@@ -27,8 +27,6 @@ function calculaAreaRetangulo(){
  const area = altura * largura
  console.log(area)
 }
-
-
 
 // EXERCÍCIO 02
 function imprimeIdade() {

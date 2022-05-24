@@ -1,0 +1,20 @@
+.pequeno-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 465px;
+
+    
+}
+
+.pequeno-card img{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
