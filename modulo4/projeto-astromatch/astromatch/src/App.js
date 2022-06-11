@@ -5,29 +5,32 @@ import TelaInicialCard from "./components/TelaInicial/TelaInicial";
 import TelaMatches from "./components/TelaMatches/TelaMatches";
 
 
+
 const App = () => {
 
-  const [escolherPerfil, setEscolherPerfil] = useState([]);
-  const [nomePerfil, setNomePerfil] = useState("");
+  const [mudarTela, setMudarTela]= useState('escolherPessoas')
 
-  useEffect(() => {
-    axios
-      .get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person")
-      .then((res) => {
-        setEscolherPerfil(res.data.results);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  const atualizaTela = ()=> {
+    if (mudarTela === 'escolherPessoas') {
+      return <TelaInicialCard/>
+    } else if (mudarTela === 'verMatches') {
+      return <TelaMatches/>
+    }
+  }
+
+  const changePage = (mudarTela) => {
+    setMudarTela(mudarTela)
+  }
+
 
   return (
     <div className="App">
       
-      <h1>Astromatch</h1>
-      <TelaInicialCard>
       
-      </TelaInicialCard>
+      
+      <TelaInicialCard changePage={changePage}/>
+     
+      
       <TelaMatches/>
        
     </div>
