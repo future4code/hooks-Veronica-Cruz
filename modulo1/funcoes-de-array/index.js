@@ -2,15 +2,15 @@
 
 // 1.  Leia o código abaixo
     
-//     const usuarios = [
-//       { nome: "Amanda Rangel", apelido: "Mandi" },
-//       { nome: "Laís Petra", apelido: "Laura" },
-//       { nome: "Letícia Chijo", apelido: "Chijo" }
-//     ]
+    const usuarios = [
+      { nome: "Amanda Rangel", apelido: "Mandi" },
+      { nome: "Laís Petra", apelido: "Laura" },
+      { nome: "Letícia Chijo", apelido: "Chijo" }
+    ]
     
-//     const novoArrayA = usuarios.map((item, index, array) => {
-//        console.log(item, index, array)
-//     })
+    const novoArrayA = usuarios.map((item, index, array) => {
+       console.log(item, index, array)
+    })
 //     ```
     
 //     a) O que vai ser impresso no console?
@@ -73,25 +73,25 @@
     { nome: "Fluffy", raca: "Poodle"},
     { nome: "Caramelo", raca: "Vira-lata"},]
 
-// const nomesDogs = pets.map((pet) => {
-//     return pet.nome
-// })
-// console.log(nomesDogs)
+const nomesDogs = pets.map((pet) => {
+    return pet.nome
+})
+console.log([nomesDogs])
 
 //b) 
-// const dogsSalsicha = pets.filter((dog) =>{
-//     return dog.raca === "Salsicha"
-// })
-// console.log(dogsSalsicha)
+const dogsSalsicha = pets.filter((dog) =>{
+    return dog.raca === "Salsicha"
+})
+console.log(dogsSalsicha)
 
 //c)
-// const todosPoodles = pets.filter((pet) => {
-//     return pet.raca === "Poodle"
-// })
-// const mensagemPoodles = todosPoodles.map((poodle) => {
-//     return `Você ganhou um cupom de desconto de 10% para tosar o ${poodle.nome}`
-// })
-// console.log(mensagemPoodles)
+const todosPoodles = pets.filter((pet) => {
+    return pet.raca === "Poodle"
+})
+const mensagemPoodles = todosPoodles.map((poodle) => {
+    return `Você ganhou um cupom de desconto de 10% para tosar o ${poodle.nome}`
+})
+console.log(mensagemPoodles)
 
 // 2 - Dado o seguinte array de produtos, realize as operações pedidas nos itens abaixo utilizando as 
 // funções de array map e filter:
@@ -108,17 +108,18 @@ const produtos = [
     { nome: "Sabão em Pó Ypê", categoria: "Limpeza", preco: 10.80 }]
 
 // a) Crie um novo array que contenha apenas o nome de cada item
-// const nomeProdutos = produtos.map((produto) => {
-//     return produto.nome
-// })
-// console.log(nomeProdutos)
+const nomeProdutos = produtos.map((produto) => {
+    return produto.nome
+})
+console.log(nomeProdutos)
 
 // b) Crie um novo array que contenha um objeto com o nome e o preço de cada item, aplicando 5% de
 // desconto em todos eles
-// const novaArray = produtos.map((produto) => {
-//     return{nome:produto.nome, preço:produto.preco * 0.95}
-// })
-// console.log(novaArray)
+
+const novaArray = produtos.map((produto) => {
+    return{nome:produto.nome, preço:produto.preco * 0.95}
+})
+console.log(novaArray)
 
 // c) Crie um novo array que contenha apenas os objetos da categoria Bebidas
 // const bebidas = produtos.filter((bebida) => {
@@ -141,3 +142,43 @@ const produtos = [
 //     return `Compre ${produto.nome} por ${produto.preco}` === "Ypê"
 // })
 // console.log(temYpe)
+//------------------------------------------------------------------------------------
+
+//DESAFIOS:
+
+// 1- Dado o seguinte array de pokémons, realize as operações pedidas nos itens abaixo:
+
+const pokemons = [
+    { nome: "Bulbasaur", tipo: "grama" },
+    { nome: "Bellsprout", tipo: "grama" },
+    { nome: "Charmander", tipo: "fogo" },
+    { nome: "Vulpix", tipo: "fogo" },
+    { nome: "Squirtle", tipo: "água" },
+    { nome: "Psyduck", tipo: "água" },
+ ];
+
+//  const nomesPokemons = pokemons.map((pokemon) => {
+//     return pokemon.nome;
+//  }) 
+//  console.log(nomesPokemons.sort())
+
+//nova função para não repetir os itens do array!!
+
+ const tiposPokemons = new Map();
+
+ pokemons.forEach((poke) => {
+    if (!tiposPokemons.has(poke.tipo)) {
+        tiposPokemons.set(poke.tipo, poke);
+    }
+ });
+ console.log([...tiposPokemons.keys()]);
+
+ //outro jeito de fazer sem repetir os itens do array!!
+ const tipos = pokemons.map((poke) => {
+    return poke.tipo;
+  });
+ const tiposSemRepetir = tipos.filter((tipo, index, array) => {
+    return array.indexOf(tipo) === index;
+  });
+  
+  console.log(tiposSemRepetir);
