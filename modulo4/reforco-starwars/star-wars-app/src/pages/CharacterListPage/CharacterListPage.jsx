@@ -9,7 +9,6 @@ const CharacterListPage = () => {
     const [characterList, setCharacterList] = useState("")
     const navigate = useNavigate()
 
-
     const getCharacterList = () => {
 
         axios.get(`${BASE_URL}/people/`)
@@ -30,18 +29,19 @@ const CharacterListPage = () => {
         })
     }
 
-    const goToDetails = () => {
+    const goToDetailsPage = () => {
         navigate("/detalhes")
     }
 
-    //  characterList
+   
+
+   
 
     return (
         <div>
             <h1>Lista de Personagens</h1>
-            <button onClick={goToDetails}>Detalhes</button>
+            <button onClick={()=>goToDetailsPage()}>Detalhes</button>
             {showCharacters()}
-       
         </div>
     )
 }
