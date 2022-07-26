@@ -2,12 +2,11 @@ import React from "react"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { BASE_URL } from "../../constants/url"
-import { useNavigate } from 'react-router-dom'
 import CharacterCard from "./styled"
 
-const CharacterListPage = () => {
-    const [characterList, setCharacterList] = useState("")
-    const navigate = useNavigate()
+const CharacterListPage = (props) => {
+    const [characterList, setCharacterList] = useState([])
+   
 
     const getCharacterList = () => {
 
@@ -24,23 +23,16 @@ const CharacterListPage = () => {
     }, [])
 
     const showCharacters =() =>{
-        return characterList && characterList.map((character, index) =>{
-            return <CharacterCard key={index}> {character.name}</CharacterCard>
+        return characterList.map((character, index) =>{
+            return <CharacterCard onClick={() => props.goToDetailsPage(character.url)} key={index}> {character.name}</CharacterCard>
         })
     }
 
-    const goToDetailsPage = () => {
-        navigate("/detalhes")
-    }
-
-   
-
-   
+  
 
     return (
         <div>
             <h1>Lista de Personagens</h1>
-            <button onClick={()=>goToDetailsPage()}>Detalhes</button>
             {showCharacters()}
         </div>
     )
