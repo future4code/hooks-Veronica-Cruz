@@ -1,53 +1,45 @@
-/**
- * EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
- * 
- * 
-    const carta = comprarCarta(); // Sorteia uma carta. Por exemplo, o rei de ouros
-    
-    console.log(carta.texto) // imprime o texto da carta. Exemplo: "K♦️" (indica "K" de ouros)
-    console.log(carta.valor) // imprime o valor da carta (um número). Exemplo: 10 (dado que "K" vale 10)
- * 
- * 
- * 
- */
 
+console.log("Bem vindo(a) ao Jogo BlackJack!")
+let novoJogo = confirm("Quer iniciar uma nova rodada?")
 
-let confirm = true
+if (novoJogo) {
+   console.log("Iniciou uma nova rodada!")
+   
+   //variáveis criadas para mostrar as cartas do usuário e do pc
+   let carta1Usuario = comprarCarta()
+   let carta2Usuario = comprarCarta()
+   let carta1Pc = comprarCarta()
+   let carta2Pc = comprarCarta()
 
-if(confirm) {
-   console.log("Bem vindo(a) ao Jogo BlackJack!")
+   //soma das cartas do usuário e do pc
+   let pontuacaoUsuario = carta1Usuario.valor + carta2Usuario.valor
+   let pontuacaoPc = carta1Pc.valor + carta2Pc.valor
+
+   //para mostrar as cartas e pontuação de cada um (usuário e pc)
+   // fora da condição, para mostrar sempre as cartas dos dois
+
+   console.log(`Usuário - cartas: ${carta1Usuario.texto} ${carta2Usuario.texto}  - pontuação ${pontuacaoUsuario}`)
+   console.log(`Computador - cartas:  ${carta1Pc.texto} ${carta2Pc.texto}  - pontuação ${pontuacaoPc}`)
+
+   //condição para comparar a pontuação do usuário com a do computador e dizer quem ganhou!
+   if (pontuacaoUsuario > pontuacaoPc) {
+      console.log("O usuário ganhou!")
+      
+     }
+   else if (pontuacaoPc > pontuacaoUsuario) {
+      console.log("O computador ganhou!")
+       
+   }else if (pontuacaoUsuario === pontuacaoPc){
+      console.log("O jogo empatou!")
+   }
+  
 } else {
    console.log("O jogo acabou!")
 }
-let carta1Usuario = comprarCarta()
-let carta2Usuario = comprarCarta()
-let carta1Pc = comprarCarta()
-let carta2Pc = comprarCarta()
-let pontuacaoUsuario = carta1Usuario.valor + carta2Usuario.valor
-let pontuacaoPc = carta1Pc.valor + carta2Pc.valor
 
 
 
-if(carta1Pc > carta1Usuario) {
-   const compra1 = comprarCarta
-   console.log(cartas.texto) 
-   console.log(cartas.valor) 
-}
-else(carta1Usuario > carta1Pc) {
-   const compra2 = comprarCarta
-   console.log(cartas.texto) 
-   console.log(cartas.valor) 
-}
 
-if(carta2Pc > carta2Usuario) {
-   const compra3 = comprarCarta
-   console.log(cartas.texto) 
-   console.log(cartas.valor) 
-}
-else(carta2Usuario > carta2Pc) {
-   const compra4 = comprarCarta
-   console.log(cartas.texto) 
-   console.log(cartas.valor) 
 
-}
+
 
