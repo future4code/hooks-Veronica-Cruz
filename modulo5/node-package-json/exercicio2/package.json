@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "exercicio2.js",
+  "type": "module",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "exercicio2": "node exercicio2.js"
   },
   "keywords": [],
   "author": "Verônica Silveira",
