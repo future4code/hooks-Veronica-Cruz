@@ -10,12 +10,34 @@
 //( 3 essenciais + 1 opcional) e retorne todas informações organizadas em um `type`
 
 
-
 enum GENERO {
-	ACAO="ação",
-	DRAMA="drama",
-	COMEDIA="comédia",
-	ROMANCE="romance",
-	TERROR="terror"
+	ACAO = "ação",
+	DRAMA = "drama",
+	COMEDIA = "comédia",
+	ROMANCE = "romance",
+	TERROR = "terror"
 }
-
+	type Filme = {
+		nome: string,
+		ano: number,
+		genero: GENERO,
+		pontuacao?: number
+	}
+const filmes = (nome: string,	ano: number,genero: GENERO,	pontuacao?: number):Filme => {
+	if(pontuacao){
+		return {
+			nome: nome,
+			ano: ano,
+			genero:genero,
+			pontuacao: pontuacao
+		} 
+	}	else{
+			return{
+				nome: nome,
+				ano: ano,
+				genero:genero
+			}
+		}
+	}
+console.log(filmes("Duna", 2021, GENERO.ACAO))
+	
