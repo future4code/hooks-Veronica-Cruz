@@ -1,0 +1,32 @@
+###
+GET http://localhost:3003/allUsers
+
+###
+GET http://localhost:3003/typeUser/9
+
+###
+GET http://localhost:3003/nameUser?name=Fred
+
+###
+POST http://localhost:3003/addUser
+Content-Type: application/json 
+
+{
+    "id": 8,
+    "name": "Verônica",
+    "email": "veronica@email.com",
+    "type": "NORMAL",
+    "age": 32
+}
+
+###
+PUT http://localhost:3003/addUser
+Content-Type: application/json
+
+{
+   "id": 9,
+    "name": "Lucas",
+    "email": "lucasa@email.com",
+    "type": "NORMAL",
+    "age": 35 
+}
