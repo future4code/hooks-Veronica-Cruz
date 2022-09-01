@@ -1,0 +1,17 @@
+###
+GET http://localhost:3003/allAccounts
+
+###
+POST http://localhost:3003/createAccount
+Content-Type: application/json
+
+{
+    "nome": "Ana",
+    "cpf": 58462447575,
+    "nascimentoString": "21/05/2018",
+    "age": 22
+
+}
+
+###
+GET http://localhost:3003/balance/58462447575
