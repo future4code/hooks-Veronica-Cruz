@@ -1,35 +1,90 @@
-.corpo-site{
-    display:grid;
-    grid-template-columns: 1fr 5fr;
+body,
+h2,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-.menu{
-    display:grid;
+h2,
+p {
+  padding: 10px;
 }
 
-.menu{
-    max-width: 300px;
-    border:2.5px solid #ccc
+.cabecalho {
+    display: flex;
+  align-items: center;
 }
-
-.fotos-menu{
-    display:flex;
-    flex-direction: row;
-    max-width: 40px;
-    max-height: 30px;
+.icone-cabecalho{
+    height: 20px;
+    width: 20px;
+    padding-bottom: 4px;
+    margin-right: 10px;
 }
-
-.cabeçalho{
+header {
+    display: flex;
     background-color: mediumvioletred;
-}
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    grid-column: 1/-1;
+    
+  }
 
-.corpo{
-    background-color: #f2d0e0;
-}
+  footer {
+    display: flex;
+    background-color: mediumvioletred;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: larger;
+    grid-column: 1/-1;
+    }
 
-.bolo-bonito{
-    width: 200px;
-    display:flex;
-    flex-direction:row
-}
+  nav{
+  
+    background-color:#f2d0e0 ;
+    padding: 10px 10px 10px 20px;
+  }
 
+  .menu-principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .fotos-menu{
+    height: 20px;
+    width: 20px;
+    padding-bottom: 4px;
+    margin-right: 10px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 5px darkgray;
+    text-align: center;
+  }
+
+  .bolo-bonito{
+    width: 100%;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    margin: 10px
+  }
+
+  body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 300px 1fr
+  }
