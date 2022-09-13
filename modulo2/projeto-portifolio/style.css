@@ -1,66 +1,69 @@
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body{
-    background-color: blueviolet;
-}
-
-#menu-principal{
-    background-color: purple;
-}
-#menu-principal li{
-     display: inline;
-}
-
-#menu-principal li a{
+.header{
+    background-color: lightblue;
+    padding: 10px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 10%;
     
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-    font-family:Arial; 
-    font-size: 2rem;
-    display: inline-block;
-    }
-
-#menu-principal li a:hover{
-    background-color: white;
-    color: purple;
-
-
-.minha-foto{
-    width: 300px;
-
 }
-.quem-sou-eu{
-    font-size: 2rem;
-    font-family:Arial;
-    text-align: center;
-    display: inline
-}
+
 .nome{
-    width: 200px;
-    font-size: 2rem;
-    font-family:Arial;
     text-align: center;
-    padding: 30%;
-    display: inline
-    
+    padding: 10px;
     
 }
 
-p{
-    font-size: 3rem;
-    font-family:Arial;
+
+.menu{
+    margin-top: 10px 0;
+    background-color: #03467b;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+   
 }
 
-.onde-estudei{
-    font-size: 4rem;
-    font-family:Arial;
-    text-align: center;
-    background-color: blue;
-    display: inline
+a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+   font-size: 20px;
 }
+
+#selected {
+    background-color: lightblue;
+}
+
+#profile-picture{
+    width: 170px;
+    height: 200px;
+    border-radius: 110px;
+}
+
+.main{
+    padding: 90px;;
+}
+
+.main h2 {
+    padding: 18px
+}
+
+.main ul{
+    display: grid;
+   
+}
+
+.footer{
+    background-color: lightblue;
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+
 
