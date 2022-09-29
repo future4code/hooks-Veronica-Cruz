@@ -23,13 +23,7 @@ app.get("/ping", ping)
 
 // Exercício 1 - Create users
 app.post("/users", createUser)
-  let errorCode = 400
-  try {
-    const{id, email, password} = req.body
-    
-  } catch (error) {
-    
-  }
+ 
 // Exercício 2 - Get users
 app.get("/users", getUsers)
 

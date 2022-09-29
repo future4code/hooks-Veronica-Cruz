@@ -6,26 +6,28 @@ import { Product } from "../models/Product"
 export const createProduct = async (req: Request, res: Response) => {
     let errorCode = 400
     try {
-        const name = req.body.name
-        const price = req.body.price
+        const {name, price} = req.body
+        const id = Math.random().toString()
 
         if (!name || !price) {
             throw new Error("Body inválido.")
         }
 
-        const newProduct: Product = {
-            id: Date.now().toString(),
-            name,
+        const prod = new Product(
+            Date.now().toString(),
+            name, 
             price
-        }
+        )
 
-        await connection(TABLE_PRODUCTS).insert({
-            id: newProduct.id,
-            name: newProduct.name,
-            price: newProduct.price
-        })
-        
-        res.status(201).send({ message: "Produto criado", product: newProduct })
+            await connection(TABLE_PRODUCTS)
+            .insert({
+                id: prod.getIdProduct(),
+                name: prod.getNameProduct(),
+                price: prod.getPriceProduct()
+                
+            })
+                
+        res.status(201).send({ message: "Produto criado", product: prod })
     } catch (error) {
         res.status(errorCode).send({ message: error.message })
     }

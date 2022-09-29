@@ -7,10 +7,8 @@ import { Purchase } from "../models/Purchase"
 export const createPurchase = async (req: Request, res: Response) => {
     let errorCode = 400
     try {
-        const userId = req.body.userId
-        const productId = req.body.productId
-        const quantity = req.body.quantity
-
+        const {userId, productId, quantity} = req.body
+       
         if (!userId || !productId || !quantity) {
             throw new Error("Body inválido.")
         }
@@ -33,11 +31,11 @@ export const createPurchase = async (req: Request, res: Response) => {
             throw new Error("Produto não encontrado.")
         }
         
-        const product: Product = {
-            id: findProduct[0].id,
-            name: findProduct[0].name,
-            price: findProduct[0].price
-        }
+        const product = new Product  (
+            findProduct[0].id,
+            findProduct[0].name,
+            findProduct[0].price
+        )
 
         const newPurchase: Purchase = {
             id: Date.now().toString(),

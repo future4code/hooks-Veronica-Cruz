@@ -11,6 +11,19 @@ export class Purchase {
         this.userId = userId;
         this.productId = productId;
         this.quantity = quantity;
+        this.totalPrice = totalPrice;
+    }
+    getUserId():string{
+        return this.userId;
+    }
+    getProductId():string{
+        return this.productId;
+    }
+    getQuantity():number{
+        return this.quantity;
+    }
+    getTotalPrice():number{
+        return this.totalPrice;
     }
 }
 
