@@ -8,22 +8,5 @@ export class Product {
         this.name = name;
         this.price = price;
     }
-    getIdProduct():string{
-        return this.id;
-    }
-    getNameProduct():string{
-        return this.name;
-    }
-    getPriceProduct():number{
-        return this.price;
-    }
-    setNewIdProduct(newId:string){
-        this.id = newId;
-    }
-    setNameProduct(newName:string){
-        this.name = newName;
-    }
-    setPriceProduct(newPrice:number){
-        this.price = newPrice;
-    }
+  
 }

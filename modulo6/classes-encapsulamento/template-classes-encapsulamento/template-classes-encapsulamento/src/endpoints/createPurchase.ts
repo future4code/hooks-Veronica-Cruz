@@ -7,6 +7,7 @@ import { Purchase } from "../models/Purchase"
 export const createPurchase = async (req: Request, res: Response) => {
     let errorCode = 400
     try {
+        const id = Date.now().toString()
         const {userId, productId, quantity} = req.body
        
         if (!userId || !productId || !quantity) {
@@ -36,21 +37,19 @@ export const createPurchase = async (req: Request, res: Response) => {
             findProduct[0].name,
             findProduct[0].price
         )
+        
+        const totalPrice = product.price * quantity
 
-        const newPurchase: Purchase = {
-            id: Date.now().toString(),
+        const newPurchase = new Purchase (
+            id,
             userId,
             productId,
             quantity,
-            totalPrice: product.price * quantity
-        }
+            totalPrice
+        )
 
         await connection(TABLE_PURCHASES).insert({
-            id: newPurchase.id,
-            user_id: newPurchase.userId,
-            product_id: newPurchase.productId,
-            quantity: newPurchase.quantity,
-            total_price: newPurchase.totalPrice
+            newPurchase
         })
 
         res.status(201).send({ message: "Compra registrada", purchase: newPurchase })

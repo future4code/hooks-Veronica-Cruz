@@ -13,19 +13,8 @@ export class Purchase {
         this.quantity = quantity;
         this.totalPrice = totalPrice;
     }
-    getUserId():string{
-        return this.userId;
-    }
-    getProductId():string{
-        return this.productId;
-    }
-    getQuantity():number{
-        return this.quantity;
-    }
-    getTotalPrice():number{
-        return this.totalPrice;
-    }
-}
+ 
+   }
 
 // type para tipar no banco de dados com snake_case
 export class PurchaseDB {
