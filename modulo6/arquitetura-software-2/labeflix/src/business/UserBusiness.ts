@@ -2,8 +2,9 @@ import { UserDatabase } from "../data/UserDatabase"
 import { v4 as generateId } from 'uuid'
 
 export class UserBusiness {
-  async create({ email, name, password }: any):Promise<void> {
-    if (!email || !name || !password) {
+  async createBusiness({name,email, password }: any):Promise<void> {
+
+    if (!name || !email || !password) {
       throw new Error("Dados inválidos (email, name, password)")
     }
 
@@ -17,10 +18,12 @@ export class UserBusiness {
       password
     })
   }
-  async getAll(){
+  async getAllBusiness(){
     try {
       const userDatabase = new UserDatabase
-      await userDatabase.getAll()
+      const result = await userDatabase.getAll()
+      return result
+
     } catch (error: any) {
       throw new Error(error.message);
       

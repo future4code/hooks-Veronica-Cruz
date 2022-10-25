@@ -5,6 +5,7 @@ export const userRouter = express.Router()
 
 const userController = new UserController()
 
-userRouter.post("/create", userController.create)
-userRouter.get("/allUsers", userController.getAll)
+userRouter.post("/create", userController.createController)
+
+userRouter.get("/allUsers", userController.getAllController)
 

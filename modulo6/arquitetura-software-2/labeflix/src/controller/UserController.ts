@@ -2,24 +2,26 @@ import { Request, Response } from "express";
 import { UserBusiness } from "../business/UserBusiness";
 
 export class UserController {
-  async create(req: Request, res: Response):Promise<void> {
+  async createController(req: Request, res: Response):Promise<void> {
     try {
-      const { email, name, password } = req.body;
+      const { name,email, password } = req.body;
 
       const userBusiness = new UserBusiness();
-      await userBusiness.create({ email, name, password });
+      await userBusiness.createBusiness({ name, email, password });
 
       res.status(201).send({ message: "Usuário cadastrado com sucesso" });
       
+      
     } catch (error: any) {
       res.status(400).send(error.message);
+      
     }
   }
-  async getAll(req: Request, res: Response) {
+  async getAllController(req: Request, res: Response) {
     try {
       const userBusiness = new UserBusiness()
       
-      const result = await userBusiness.getAll()
+      const result = await userBusiness.getAllBusiness()
 
       res.status(200).send(result)
 

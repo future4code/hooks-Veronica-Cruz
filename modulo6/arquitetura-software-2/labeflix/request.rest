@@ -2,22 +2,22 @@ POST http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-    "name": "teste",
-    "email": "email@email.com",
-    "password": "23432535"
+    "name": "Jhonatta",
+    "email": "jhonatta@email.com",
+    "password": "123456"
 }
 
 ### Exercício 1 - Get users
 GET http://localhost:3003/user/allUsers
 
 ### Exercicio 3 - Create Movie
-POST http://localhost:3003/movie
+POST http://localhost:3003/movie/createMovie
 Content-Type: application/json
 
 {
-    "title": "Harry Potter",
-    "description": "Pequeno bruxo em hogwarts",
-    "duration_in_minutes": 320,
-    "year_of_release": 2005
+    "title": "A Dama e o Vagabundo",
+    "description": "Dois cães apaixonados que gostam de espaguete!",
+    "duration_in_minutes": 250,
+    "year_of_release": 1998
 }
 

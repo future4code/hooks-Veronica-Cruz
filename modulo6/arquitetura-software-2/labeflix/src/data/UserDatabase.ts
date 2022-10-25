@@ -1,5 +1,4 @@
 import { BaseDatabase } from "./BaseDatabase";
-import { User } from "../types/User";
 
 export class UserDatabase extends BaseDatabase {
   private static TABLE_NAME = "LABEFLIX_USER";
@@ -15,8 +14,7 @@ export class UserDatabase extends BaseDatabase {
       .into(UserDatabase.TABLE_NAME);
   }
   async getAll(){
-    const users = await UserDatabase.connection(UserDatabase.TABLE_NAME)
-    const result = users.map(user=> new User(user.id, user.name, user.email, user.password))
+    const result = await UserDatabase.connection(UserDatabase.TABLE_NAME).select('*')
     return result
     
   }
