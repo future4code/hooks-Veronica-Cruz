@@ -5,4 +5,4 @@ export const userRouter = express.Router()
 
 const userController = new UserController()
 
-userRouter.post("/create", userController.createUserController)
+userRouter.post("/createUser", userController.createController)

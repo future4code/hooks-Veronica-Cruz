@@ -1,10 +1,10 @@
-import { user} from "../models/User";
+import { User, userInsert} from "../models/User";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class UserDatabase extends BaseDatabase {
     private static TABLE_NAME = "labook_users"
 
-    async createUserDatabase (user:user): Promise<void>{
+   public async createUserDatabase (user:userInsert): Promise<void>{
         await UserDatabase.connection
         .insert({
             id: user.id,
@@ -13,4 +13,6 @@ export class UserDatabase extends BaseDatabase {
             password: user.password
         }).into(UserDatabase.TABLE_NAME)
     }
+
+   
 }

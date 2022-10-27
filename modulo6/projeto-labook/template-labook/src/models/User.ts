@@ -17,11 +17,30 @@ export class User{
     getPassword(){
         return this.password
     }
+    setId(newId: string) {
+        this.id = newId
+      }
+    
+      setName(newName: string) {
+        this.name = newName
+      }
+    
+      setEmail(newEmail: string) {
+        this.email = newEmail
+      }
+    
+      setPassword(newPassword: string) {
+        this.password = newPassword
+      }
 }
 
-export type user = {
-    id: string,
+export interface userInputDTO {
     name: string,
     email: string,
     password: string
-}
+  }
+
+
+export interface userInsert extends userInputDTO {
+    id: string
+ }

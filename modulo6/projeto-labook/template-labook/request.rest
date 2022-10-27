@@ -1,0 +1,29 @@
+### Exercício 1 - Cadastrar Usuário
+POST http://localhost:3003/user/createUser
+Content-Type: application/json
+
+{
+    "name":"Angelica",
+    "email":"angelica@email.com",
+    "password": "3233"
+}
+
+### Exercício 2 - Criar Post
+POST http://localhost:3003/post/createPost
+Content-Type: application/json
+
+{
+    "photo":"https://picsum.photos/200/300",
+    "description":"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...",
+    "type":"NORMAL",
+    "authorId":"a429a65e-1a61-49c9-8c68-06c21d363af7"
+}
+
+### Exercício 3 - Fazer amizade
+POST http://localhost:3003/friendship
+Content-Type: application/json
+
+{
+    "user_id":"bc35b328-cf7b-46a2-8115-88ffdd3b543d",
+    "friend_id": "ed0f9e25-28aa-4e92-9abc-0375db424dd4"
+}

@@ -1,30 +1,26 @@
 import {Request, Response} from "express"
 import { generateId } from "../services/generateId"
-import {UserDatabase} from "../data/UserDatabase"
+import { UserBusiness } from "../business/UserBusiness"
+import { userInputDTO } from "../models/User"
 
 export class UserController{
-  async createUserController (req: Request, res: Response) {
+  async createController (req: Request, res: Response) {
         try {
-           let message = "Success!"
+
+         let message = "Success!"
            const { name, email, password } = req.body
-     
-           if (!name || !email || !password) {
-              res.statusCode = 406
-              message = '"name", "email" and "password" must be provided'
-              throw new Error(message)
-           }
      
            const id: string = generateId()
            
-           const userDatabase = new UserDatabase()
+           const userBusiness = new UserBusiness()
+           const user: userInputDTO={
+            name,
+            email,
+            password
+           }
 
-           await userDatabase.createUserDatabase('labook_users')
-              .insert({
-                 id,
-                 name,
-                 email,
-                 password
-              })
+           await userBusiness.createBusiness(user)
+              
      
            res.status(201).send({ message })
      
@@ -33,6 +29,6 @@ export class UserController{
            let message = error.sqlMessage || error.message
            res.send({ message })
         }
-     })
+     }
 }
 
