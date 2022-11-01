@@ -1,0 +1,29 @@
+### Endpoint Criar usuário
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "name": " Paula",
+    "email":"paula@email.com",
+    "password": "42543458"
+}
+
+### Endpoint Pegar todos usuários
+GET http://localhost:3003/user/
+Content-Type: application/json
+
+### Endpoint de login
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email":"isa@email.com",
+    "password":"255375"
+}
+
+### Endpoint para retornar usuário logado
+GET http://localhost:3003/user/userLogged
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczODc2MWIwLTNmNWMtNDQ0Yi1hZTlhLWM3Nzg4ODg3MDU3MiIsImlhdCI6MTY2NzMyOTI1NywiZXhwIjoxNjY3MzI5MzE3fQ.MB0oj67Gnfnexmld1jWpeuZaIhIaJr2bg7fT5RyIWu8
+Content-Type: application/json
+
+   
