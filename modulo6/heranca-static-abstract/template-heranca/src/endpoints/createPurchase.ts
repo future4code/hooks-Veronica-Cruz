@@ -3,6 +3,7 @@ import connection from "../database/connection"
 import { TABLE_PRODUCTS, TABLE_PURCHASES, TABLE_USERS } from "../database/tableNames"
 import { Product } from "../models/Product"
 import { Purchase } from "../models/Purchase"
+import { UserDatabase } from "../database/UserDatabase"
 
 export const createPurchase = async (req: Request, res: Response) => {
     let errorCode = 400
@@ -15,9 +16,11 @@ export const createPurchase = async (req: Request, res: Response) => {
             throw new Error("Body inválido.")
         }
 
-        const findUser = await connection(TABLE_USERS)
-        .select()
-        .where({ id: userId })
+        // const findUser = await connection(TABLE_USERS)
+        // .select()
+        // .where({ id: userId })
+        const userDatabase = new UserDatabase()
+        const findUser = await userDatabase.getUserById(userId)
 
         if (findUser.length === 0) {
             errorCode = 404
