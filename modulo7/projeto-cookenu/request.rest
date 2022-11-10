@@ -1,0 +1,15 @@
+### Endpoint com authorization
+GET http://localhost:3003/user/profile
+Authorization:
+Content-Type: application/json
+
+### Endpoint Signup
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Angelica", 
+   "email": "angelica@email.com" ,
+   "password": "angel123",
+   "role":"NORMAL"
+}
