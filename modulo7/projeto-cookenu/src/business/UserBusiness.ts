@@ -1,6 +1,6 @@
 import { UserDatabase } from "../data/UserDatabase";
-import {CustomError, InvalidEmail, InvalidName,InvalidPassword, Unauthorized, UserNotFound,} from "../error/CustomError";
-import { UserInputDTO, user, EditUserInputDTO, EditUserInput, LoginInputDTO, UserRole,} from "../models/User";
+import {CustomError, InvalidEmail, InvalidName,InvalidPassword, Unauthorized, UserNotFound,InvalidRole} from "../error/CustomError";
+import { UserInputDTO, user, EditUserInputDTO, EditUserInput, LoginInputDTO, UserRole} from "../models/User";
 import { HashManager } from "../services/HashManager";
 import { IdGeneratorInterface } from "../services/IdGenerator";
 import { TokenGenerator } from "../services/TokenGenerator";
@@ -16,26 +16,28 @@ export class UserBusiness {
   public createUser = async (input: UserInputDTO): Promise<string> => {
     try {
       const { name, email, password } = input;
-      let role = input.role;
+      let role = input.role
+    
 
       if (!name || !email || !password || !role) {
-        throw new CustomError(
-          400,
-          'Preencha os campos "name", "email", "password" e "role"'
-        );
+        throw new CustomError(400,'Preencha os campos "name", "email", "password" e "role"');
       }
 
       if (name.length < 4) {
         throw new InvalidName();
       }
 
+      if (password.length < 6) {
+        throw new InvalidPassword();
+      }
+
       if (!email.includes("@")) {
         throw new InvalidEmail();
       }
 
-      // if (role !== "NORMAL" && role !== "ADMIN") {
-      //   throw new InvalidRole();
-      // }
+      if (role !== "NORMAL" && role !== "ADMIN") {
+        throw new InvalidRole();
+      }
 
       if (role !== "NORMAL" && role !== "ADMIN") {
         role = "NORMAL";
@@ -50,7 +52,7 @@ export class UserBusiness {
         name,
         email,
         password: hashPassword,
-        role: UserRole[role as keyof typeof UserRole],
+        role: UserRole[role as keyof typeof UserRole]
       };
 
       await this.userDatabase.insertUser(user);
@@ -97,41 +99,15 @@ export class UserBusiness {
     }
   };
 
-  public editUser = async (input: EditUserInputDTO) => {
-    try {
-      const { name, id, token } = input;
-
-      if (!name || !id || !token) {
-        throw new CustomError(
-          400,
-          'Preencha os campos "id", "name" e "token"'
-        );
-      }
-
-      const data = this.tokenGenerator.tokenData(token);
+ //PEGAR ID E EMAIL DO USUÁRIO CADASTRADO ATRAVÉS DO TOKEN FORNECIDO NO LOGIN
+  // public getUser = async (input: EditUserInputDTO) => {
+  //   try {
+ 
      
 
-      if (data.role != UserRole.ADMIN) {
-        throw new Unauthorized();
-      }
-
-      if (!data.id) {
-        throw new Unauthorized();
-      }
-
-      if (name.length < 4) {
-        throw new InvalidName();
-      }
-
-      const editUserInput: EditUserInput = {
-        id,
-        name
-        
-      };
-
-      await this.userDatabase.editUser(editUserInput);
-    } catch (error: any) {
-      throw new CustomError(400, error.message);
-    }
-  };
+   
+  //   } catch (error: any) {
+  //     throw new CustomError(400, error.message);
+  //   }
+  // };
 }

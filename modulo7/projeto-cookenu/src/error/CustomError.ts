@@ -24,7 +24,7 @@ export class CustomError extends Error {
   
   export class InvalidPassword extends CustomError {
     constructor() {
-      super(400, "Senha inválida");
+      super(400, "Senha inválida. Insira uma senha de pelo menos 6 caracteres!");
     }
   }
   
@@ -39,4 +39,13 @@ export class CustomError extends Error {
       super(401, "Usuário não autorizado");
     }
   }
-  
+
+  //==============================================================================================
+  //RECEITAS ERRORS
+
+   
+  export class RecipeNotCreated extends CustomError {
+    constructor() {
+      super(404, "Receita não foi criada pois está faltando algum dado ou está incorreto. Por favor, insira título, descrição e data de criação!");
+    }
+  }

@@ -7,13 +7,13 @@ export class UserController {
 
   public signup = async (req: Request, res: Response) => {
     try {
-      const { name, email, password} = req.body; //, role 
+      const { name, email, password, role} = req.body; //, role 
 
       const input: UserInputDTO = {
         name,
         email,
         password,
-        // role,
+        role
       };
 
       const token = await this.userBusiness.createUser(input);
@@ -40,19 +40,16 @@ export class UserController {
     }
   };
 
-  public editUser = async (req: Request, res: Response) => {
-    try {
-      const input: EditUserInputDTO = {
-        name: req.body.name,
-        id: req.params.id,
-        token: req.headers.authorization as string,
-      };
+//PEGAR ID E EMAIL DO USUÁRIO CADASTRADO ATRAVÉS DO TOKEN FORNECIDO NO LOGIN
+  // public getUser = async (req: Request, res: Response) => {
+  //   try {
+  //     const input = {token: req.headers.authorization as string};
 
-      await this.userBusiness.editUser(input);
+  //     await this.userBusiness.getUser(input);
 
-      res.status(201).send({ message: "Usuário alterado!" });
-    } catch (error: any) {
-      res.status(400).send(error.message);
-    }
-  };
+  //     res.status(201).send({ message: "Usuário alterado!" });
+  //   } catch (error: any) {
+  //     res.status(400).send(error.message);
+  //   }
+  // };
 }
