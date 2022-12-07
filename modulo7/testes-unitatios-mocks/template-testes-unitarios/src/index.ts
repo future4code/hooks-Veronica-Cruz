@@ -1,3 +1,4 @@
+//dados do personagem
 export interface Character {
     name: string,
     life: number,
@@ -5,25 +6,8 @@ export interface Character {
     strength: number,
 }
 
-export interface ValidateCharacterOutput{
-    isValid: boolean,
-    errors:Character[],
-}
-
-interface ValidateCharacterInput {
-    key: string,
-    value: string
-}
-
-export const validateCharacter = (input: any): ValidateCharacterOutput => {
-    let errors: Character[]=[]
-
-    for(const key in input){
-        if(input[key] !== false && !input[key]){
-            errors.push({key,value:input[key]
-            })
-        }
-    }
+//verificações para validar dados do personagem
+export const validateCharacter = (input: any)=> {
 
     if (!input.name || input.life === undefined || input.strength === undefined ||
       input.defense === undefined) {
@@ -36,6 +20,29 @@ export const validateCharacter = (input: any): ValidateCharacterOutput => {
     }else {
         return true;
     }
-    // return isValida:errors.length === 0,
-    // errors
+   
+  };
+
+  //verificações para interagir ataque e defesa de personagens
+//   export const performAttack = (attacker: Character, defender: Character) => {
+//     if (!validateCharacter(attacker) || !validateCharacter(defender)) {
+//       throw new Error("Invalid character");
+//     }
+  
+//     if (attacker.strength > defender.defense) {
+//       defender.life -= attacker.strength - defender.defense;
+//     }
+//   };
+
+//inversão de dependências da função anterior
+export const performAttack = (attacker: Character,defender: Character,
+    validator: (input: Character) => boolean
+  ) => {
+    if (!validator(attacker) || !validator(defender)) {
+      throw new Error("Invalid character");
+    }
+  
+    if (attacker.strength > defender.defense) {
+      defender.life -= attacker.strength - defender.defense;
+    }
   };
