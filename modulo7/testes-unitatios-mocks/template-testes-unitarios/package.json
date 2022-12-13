@@ -1,6 +1,6 @@
 {
    "scripts": {
-      "test": "jest --watchAll",
+      "test": "jest",
       "dev-start": "tsnd --transpile-only --ignore-watch node_modules ./src/index.ts"
    },
    "devDependencies": {
