@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./script.js"></script>
+    
 </head>
 
 <body>
@@ -17,30 +19,39 @@
             <div class="icon-menu" onclick="abrirMenu()">
                 <img src="./imagens/menu-aberto.png" alt="menu-aberto">
             </div>
-            <div id="barra-menu">
+           
+            <nav id="barra-menu">
                 <ul>
-                    <li><b> <a id="selected" href="index.html">Início</a></b></li>
-                    <li><b><a href="#">Sobre Mim</a></b></li>
-                    <li><b> <a href="#">Serviços</a> </b></li>
-                    <li><b> <a href="#">Projetos</a> </b></li>
-                    <li><b><a href="#">Contato</a></b></li>
+                   
+                    <li data-scroll-nav="1"><b><a href="#1">Sobre Mim</a></b></li>
+                    <li data-scroll-nav="2"><b> <a href="#2">Serviços</a> </b></li>
+                    <li data-scroll-nav="3"><b> <a href="#3">Projetos</a> </b></li>
+                    <li data-scroll-nav="4"><b><a href="#4">Contato</a></b></li>
                     
                 </ul>
                 <div class="C-icon">
-                    <span class="icon"><ion-icon name="logo-linkedin"></ion-icon></span>
-                    <span class="icon"><ion-icon name="logo-github"></ion-icon></span>
 
-                </div>
-            </div>
+                <span>
+                    <a href="https://www.linkedin.com/in/veronicasgc"><img class="icon" src="./imagens/linkedin.png"></a>
+                </span>
+                <span>
+                    <a href="https://github.com/veronicasgc"> <img class="icon" src="./imagens/logo github.png"></a>
+                </span>
+                </div>                            
+
+            </nav>
+          
         </aside>
-        <div class="main-title">
+        <div id="0" class="main-title">
             <h1>Verônica Silveira</h1>
             <h2>Desenvolvedora Web</h2>
             <h5>Trabalho como Freelancer</h5>
-            <button class="btn">Saber mais</button>
+            <button class="btn" onclick="saberMais()">Saber mais</button>
         </div>
+     
+      
     </div>
-    <section class="C-sobre" data-aos="fade-up">
+    <section id="1"  class="C-sobre" data-aos="fade-up">
         <div class="image">
             <img src="./imagens/image.jpg" alt="sobre">
         </div>
@@ -56,10 +67,10 @@
                 <br>me interesso em aprender coisas novas. Tenho experiência com Git/Github.
                 <br>Tem sido desafiador, mas também surpreendente entrar nesse mundo.
                <br>Busco desenvolvimento pessoal e evolução constante, estudando a todo momento!</p>
-               <button class="btn">Saber mais</button>
+               <button class="btn" onclick="saberMais()">Saber mais</button>
         </div>
     </section>
-    <section class="container" data-aos="fade-up">
+    <section id="2" class="container" data-aos="fade-up">
         <h1>Serviços</h1>
         <p>Meus serviços pra você. Faça sua oferta e me envie uma mensagem!</p>
         <p>Nossos Serviços</p>
@@ -93,7 +104,7 @@
             </div>
         </div>          
     </section>
-    <section class="C-projetos" data-aos="fade-up">
+    <section id="3" class="C-projetos" data-aos="fade-up">
         <h1>Meus projetos</h1>
         <p>Meus serviços pra você. Faça sua oferta e me envie uma mensagem!</p>
         <p>Nossos serviços</p>
@@ -102,24 +113,42 @@
             <a href="https://github.com/veronicasgc/NG_Cash"><h5>Backend de Sistema Bancário  </h5></a>
             <img src="./imagens/LabTube.jpg" alt="labetube">
             <a href="https://github.com/veronicasgc/veronica-cruz/tree/master/modulo2/jsx-labetube"><h5>Lab Tube</h5></a>
-                      
-                 
-
+                    
+                
         </div>
     </section>
-    <section class="C-rodape">
+    <section id="4" class="C-rodape">
         <h1>Nos envie uma mensagem para fecharmos o projeto!</h1>
-        <form>
-            <input type="email" name="email" id="email" placeholder="Envie uma mensagem">
-            <input type="submit" name="submit" value="Enviar">
+
+        <form id="contato" action="https://api.staticforms.xyz/submit" method="post">
+
+            <input type="hidden" name="accessKey" value="9aae508c-a4f7-48a7-8f04-d62ad409182b">
+          
+
+            <textarea   name="message" id="message" placeholder="Envie uma mensagem"></textarea>
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/mensagem.html">
+            <input type="submit" value="Enviar" />
+      
+            
+
         </form>
+        <div class="show-button" data-scroll="suave" data-anima="scroll">
+            <a href="#0">
+                <div class="topo">
+                    <img src="./imagens/botao-topo.png" alt="botao-topo">
+                </div>
+    
+            </a>
+        </div>
+
     </section>
+   
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="script.js"></script>
+    <script>AOS.init()</script>
+   
+    <script src="./jquery.js"></script>
+    <script src="./scrollit.min.js"></script>
 </body>
 
 </html>
