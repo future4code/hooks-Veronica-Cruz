@@ -10,6 +10,7 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="./script.js"></script>
+   
     
 </head>
 
@@ -46,7 +47,7 @@
             <h1>Verônica Silveira</h1>
             <h2>Desenvolvedora Web</h2>
             <h5>Trabalho como Freelancer</h5>
-            <button class="btn" onclick="saberMais()">Saber mais</button>
+            <button class="btn" type="button" onclick="saberMais()">Saber mais</button>
         </div>
      
       
@@ -67,7 +68,7 @@
                 <br>me interesso em aprender coisas novas. Tenho experiência com Git/Github.
                 <br>Tem sido desafiador, mas também surpreendente entrar nesse mundo.
                <br>Busco desenvolvimento pessoal e evolução constante, estudando a todo momento!</p>
-               <button class="btn" onclick="saberMais()">Saber mais</button>
+            
         </div>
     </section>
     <section id="2" class="container" data-aos="fade-up">
@@ -118,20 +119,16 @@
         </div>
     </section>
     <section id="4" class="C-rodape">
-        <h1>Nos envie uma mensagem para fecharmos o projeto!</h1>
+        <h2>Nos envie uma mensagem<br> para fecharmos o projeto!</h2>
 
-        <form id="contato" action="https://api.staticforms.xyz/submit" method="post">
-
-            <input type="hidden" name="accessKey" value="9aae508c-a4f7-48a7-8f04-d62ad409182b">
-          
-
-            <textarea   name="message" id="message" placeholder="Envie uma mensagem"></textarea>
-            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/mensagem.html">
-            <input type="submit" value="Enviar" />
-      
-            
-
-        </form>
+        <div id="div-fixa" class="flutuar" data-shrink="yes">
+            <a href="https://api.whatsapp.com/send?phone=5531983224416&text=Ol%C3%A1!%20Te%20retorno%20em%20breve.%20Aguarda%20um%20momento%20por%20favor." target="_blank">
+                <div class="flex-itens">
+                    <img src="./imagens/whats.png" alt="chamar no whats">
+                    <span>Converse Conosco</span>
+                </div>
+            </a>
+        </div>
         <div class="show-button" data-scroll="suave" data-anima="scroll">
             <a href="#0">
                 <div class="topo">
@@ -143,10 +140,9 @@
 
     </section>
    
-
+    <script src="./whatsapp-shrink.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init()</script>
-   
     <script src="./jquery.js"></script>
     <script src="./scrollit.min.js"></script>
 </body>

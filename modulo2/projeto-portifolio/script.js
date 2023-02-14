@@ -8,13 +8,8 @@ function abrirMenu() {
 }
 
 
-function botaoVoltar() {
-  window.location = "index.html";
-}
-
-
 function saberMais() {
-    document.getElementById("contato");
-    console.log(saberMais());
+    window.location = "index.html#4";
+   
 }
 

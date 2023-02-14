@@ -428,46 +428,14 @@ aside{
    
 }
 
-.C-rodape h1 {
+.C-rodape h2 {
     text-align: center;
     font-family: "Inria Sans";
     font-weight: lighter;
+    font-size: 20px;
     color: white;
 }
 
-.C-rodape form textarea{
-    display: inline-block;
-    padding: 14px 50px 14px 15px;
-    border-radius: 30px;
-    width: 100%;
-    outline: none;
-    border: none;
-    margin-top: 25px;
-}
-
-.C-rodape form input:last-child{
-    position: absolute;
-    display: inline-block;
-    outline: none;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    background-color: #cb6be6;
-    color: white;
-    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    cursor: pointer;
-    font-size: 15px;
-    width: 150px;
-    margin-top: 28px;
-    right: 52px
-}
-
-@media screen and (max-width:523px){
-    .C-rodape form input:last-child{
-        width: 100px;
-    }
-    
-}
 
 /*==========Botão voltar ao topo===============*/
 
@@ -485,4 +453,71 @@ aside{
    
 }
 
+/*==========Botão whatsapp===============*/
 
+#div-fixa{
+    position: fixed;
+    bottom: 20px;
+    margin: 0 20px;
+    background-color: #D7CBF2;
+    width: 230px;
+    border-radius: 50px;
+    cursor: pointer ;
+    transition: 0.5s all;
+}
+
+#div-fixa.shrink {
+    width: 50px;
+    transition: 0.5s all;
+    overflow: hidden;
+}
+
+#div-fixa img {
+    width: 50px;
+    height: 50px;
+}
+
+#div-fixa a {
+    text-decoration: none;
+}
+
+#div-fixa a .flex-itens {
+    display: flex;
+    align-items: center;
+   
+
+}
+
+#div-fixa a .flex-itens span {
+   display: block;
+   font-family: 'Inria Sans';
+   font-weight: bold;
+   color:#180127;
+   margin-left: 5px;
+   min-width: 170px;
+   opacity: 0;
+}
+
+#div-fixa a .flex-itens span.aparecer{
+    transition: 0.5s all;
+    opacity: 1;
+}
+
+.flutuar {
+    animation-name: flutuar;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flutuar {
+    from {
+        transform: translate3d(0,0,0);
+        filter: brightness(100%);
+    } 
+    to {
+        transform: translate3d(0,-15px,0);
+        filter: brightness(150%)
+    }
+}
