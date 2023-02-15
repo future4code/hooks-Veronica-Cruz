@@ -364,11 +364,14 @@ aside{
 }
 
 .C-projetos h5{
+    display: flex;
+    flex-direction: column;
     font-family: "Inria Sans";
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     font-weight: bold;
-    padding: 50px;
+    padding: 0px;
+    margin-left: 0px;
 
 }
 .C-projetos a{
@@ -394,11 +397,12 @@ aside{
     margin-top: 150px;
     flex-wrap: wrap;
    
+   
 }
 
 .img-projetos img{
-    width: 350px;
-    height: auto;
+    width: 180px;
+    height: 150px;
     box-shadow: 4px 4px 4px #858585, 4px 4px 4px;
     border-radius: 10px;
 }
