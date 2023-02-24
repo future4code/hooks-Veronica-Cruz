@@ -8,8 +8,8 @@ function abrirMenu() {
 }
 
 
-function saberMais() {
-    window.location = "index.html#4";
+function curriculo() {
+    window.location = "./Curriculo Verônica Silveira G. Cruz.pdf";
    
 }
 
