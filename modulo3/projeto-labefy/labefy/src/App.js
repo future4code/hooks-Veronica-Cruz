@@ -1,37 +1,43 @@
 import React, {useState} from "react";
-import axios from "axios";
 import styled from "styled-components"
 import Header from "./components/Header"
-import CriarPlaylist from "./components/CriarPlaylist";
-import GerenciarPlaylists from "./components/GerenciarPlaylists";
+import CreatePlaylist from "./components/CreatePlaylist";
+import PlaylistManager from "./components/PlaylistManager";
 
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 auto;
+
+`
 
 const App = () => {
 
-  const [paginaAtual, setPaginaAtual] = useState('playlistCreate') // 'playlistManager'
+  const [currentPage, setCurrentPage] = useState('playlistCreate') // 'playlistManager'
 
-  const rendenrizarTela = () => {
-    if (paginaAtual === 'playlistCreate' ){
-      return  <CriarPlaylist />
-    }else if(paginaAtual === 'playlistManager') {
-      return   <GerenciarPlaylists />
+  const renderCurrentPage = () => {
+    if (currentPage === 'playlistCreate' ){
+      return  <CreatePlaylist />
+    }else if(currentPage === 'playlistManager') {
+      return   <PlaylistManager />
     }
   }
 
-  const atualizarTela =(paginaAtual) =>{
-    setPaginaAtual(paginaAtual)
+  const refreshScreen =(currentPage) =>{
+    setCurrentPage(currentPage)
   }
   
-
-
   return (
-    <div className="App">
+    <AppContainer className="App">
      
-      <Header atualizarTela={atualizarTela}/>
+      <Header refreshScreen={refreshScreen}/>
      
-      {rendenrizarTela()}
+      {renderCurrentPage()}
      
-    </div>
+    </AppContainer>
   );
   }
 

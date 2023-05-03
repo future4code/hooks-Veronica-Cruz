@@ -7,67 +7,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio Verônica Silveira</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./script.js"></script>
+   
+    
 </head>
 
 <body>
-   
-    <div class="header">
-        <h1 class="nome">Verônica Silveira Guimarães Cruz - Desenvolvedora Full Stack</h1>
-     
-        <div class ="menu">
-            <a id="selected" href = "index.html">Início</a>
-            <a href = "experiencia.html">Experiência e Formação</a>
-            <a href = "projetos.html">Projetos</a>
-            <a href="contato.html">Contato</a>
-        </div>
-    </div>
-   
-    <div class="main">
-        <h2>Quem Sou Eu?</h2>
-        <img id="profile-picture" src="./imagens/veronica.jpeg" alt="">
-        <p>Sou formada em Educação Física. Já trabalhei na área durante 8 anos com
-            crianças, adolescentes, adultos e idosos. E além de praticar esportes, gosto
-            também da área tecnológica! Desde criança gostava de saber como
-            funcionam as coisas. Sempre fui curiosa.
-            Atualmente faço curso de Web Full Stack na Labenu, aprendendo sobre
-            Frontend e Backend. Conhecimento em Web com HTML, CSS, Javascript,
-            Typescript, ReactJS, NodeJS, SQL e NoSQL e me interesso em aprender
-            coisas novas. Tenho experiência com Git/Github.. Tem sido desafiador, mas
-            também surpreendente entrar nesse mundo.
-            Busco desenvolvimento pessoal e evolução constante, estudando a todo
-            momento!
-        </p>
-        <h2>Minhas Habilidades</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>React.JS</li>
-            <li>Styled-Components</li>
-            <li>React Hooks</li>
-            <li>REST</li>
-            <li>Restful</li>
-            <li>HTTP</li>
-            <li>Jest</li>
-        </ul>
-        <ul>
-            <li>Node.JS</li>
-            <li>Knex</li>
-            <li>Typescript</li>
-            <li>MySQL</li>
-            <li>AWS</li>
-            <li>SQL</li>
-            <li>Github</li> 
-            <li>Firebase</li> 
-            <li>Testes unitários</li> 
-        </ul>
-    </div>
+    <div class="section-1-bg">
+        <aside>
+            <div class="icon-menu" onclick="abrirMenu()">
+                <img src="./imagens/menu-aberto.png" alt="menu-aberto">
+            </div>
+           
+            <nav id="barra-menu">
+                <ul>
+                   
+                    <li data-scroll-nav="1"><b><a href="#1">Sobre Mim</a></b></li>
+                    <li data-scroll-nav="2"><b> <a href="#2">Serviços</a> </b></li>
+                    <li data-scroll-nav="3"><b> <a href="#3">Projetos</a> </b></li>
+                    <li data-scroll-nav="4"><b><a href="#4">Contato</a></b></li>
+                    
+                </ul>
+                <div class="C-icon">
 
-    <div class="footer">
-        <h3>Redes Sociais</h3>
-        <a href="https://www.linkedin.com/in/veronicasgc/" target="_blank">Linkedin</a>
-        <a href="https://github.com/veronicasgc/veronica-cruz" target="_blank">GitHub</a>
+                <span>
+                    <a href="https://www.linkedin.com/in/veronicasgc"><img class="icon" src="./imagens/linkedin.png"></a>
+                </span>
+                <span>
+                    <a href="https://github.com/veronicasgc"> <img class="icon" src="./imagens/logo github.png"></a>
+                </span>
+                </div>                            
+
+            </nav>
+          
+        </aside>
+        <div id="0" class="main-title">
+            <h1>Verônica Silveira</h1>
+            <h2>Desenvolvedora Web</h2>
+            <h5>Web Full Stack</h5>
+            <button class="btn" onclick = curriculo()>Currículo</button>
+        </div>
+     
+      
     </div>
+    <section id="1"  class="C-sobre" data-aos="fade-up">
+        <div class="image">
+            <img src="./imagens/image.jpg" alt="sobre">
+        </div>
+        <div class="sobre-mim">
+            <h1>Sobre mim</h1>
+            <h4>Desenvolvedora & <span>design</span></h4>
+            <p>Meu nome é Verônica e desde criança sempre fui curiosa por saber
+                como o computador <br>
+                e outros equipamentos que utilizam de tecnologia, funcionavam.<br>
+                 Me formei em Educação Física e exerci a profissão por um tempo, mas <br>
+                sempre tive contato com a área tecnológica.
+                <br>Iniciei o curso de Web Full Stack  na Labenu, 
+                aprendendo sobre Frontend e Backend. <br>Conhecimentos em Web com HTML, CSS,
+                 Javascript, Typescript, ReactJS, NodeJS, SQL, <br>entre outras linguagens de programação e
+                <br>me fez enxergar um mundo de possibilidades, tanto profissionalmente como<br>
+                 de expandir meu potencial criativo.
+                <br>Atualmente, me encontro em transição de carreira <br>
+                e tem sido desafiador, mas também surpreendente entrar nesse mundo.
+               <br>Busco desenvolvimento pessoal e evolução, através de estudo constante!</p>
+            
+        </div>
+    </section>
+    <section id="2" class="container" data-aos="fade-up">
+        <h1>Serviços</h1>
+        <p>Nossos Serviços</p>
+        <div class="C-card" data-aos="fade-up">
+            <div class="Card">
+                <img src="./imagens/frontend.jpg" alt="frontend">
+                <h3>Frontend</h3>
+                <h4>Design de aplicações, 
+                    <br>Criação de softwares
+                    <br> sites, aplicativos, etc.
+                </h4>
+            </div>
+            <div class="Card">
+                <img src="./imagens/backend.png" alt="backend">
+                <h3>Backend</h3>
+                <h4>Servidores, 
+                    <br> aplicações e
+                    <br>banco de dados.
+                </h4>
+            </div>
+                  
+        </div>
+        <div class="C-card-2" data-aos="fade-up">
+            <div class="card">
+                <img src="./imagens/fullstack.jpg" alt="fullstack">
+                <h3>Full Stack</h3>
+                <h4>Projetos completos
+                    <br> Frontend e Backend.
+                    
+                </h4>
+            </div>
+        </div>          
+    </section>
+    <section id="3" class="C-projetos" data-aos="fade-up">
+        <h1>Meus projetos</h1>
+        <p>Confira alguns projetos. Faça sua oferta e me envie uma mensagem!</p>
+       
+        <div class="img-projetos" data-aos="fade-up">
+            <div>
+                <h5>Backend de Sistema Bancário</h5>
+                <img class="sistema-bancario" src="./imagens/sistema-bancário.png" alt="banc">
+                <a href="https://github.com/veronicasgc/NG_Cash"> 
+                    <img class="icon" src="./imagens/logo github.png">
+                </a>
+                <a>
+                    <img class="icon2" src="./imagens/site-icone.png.crdownload">
+                </a>
+            </div>
+            <div>
+                <h5>Lab Tube</h5>
+                <img src="./imagens/LabTube.jpg" alt="labetube">
+                <a href="https://github.com/veronicasgc/veronica-cruz/tree/master/modulo2/jsx-labetube">
+                    <img class="icon" src="./imagens/logo github.png">
+                </a>
+                <img class="icon2" src="./imagens/site-icone.png.crdownload">
+                <a>
+    
+                </a>
+            </div>
+           
+                              
+                
+        </div>
+    </section>
+    <section id="4" class="C-rodape">
+        <h2><p>&copy; 2023 Portifolio_Veronica_Silveira</p></h2>
+
+        <div id="div-fixa" class="flutuar" data-shrink="yes">
+            <a href="https://api.whatsapp.com/send?phone=5531983224416" target="_blank">
+                <div class="flex-itens">
+                    <img src="./imagens/whats.png" alt="chamar no whats">
+                    <span>Enviar Mensagem</span>
+                </div>
+            </a>
+        </div>
+        <div class="show-button" data-scroll="suave" data-anima="scroll">
+            <a href="#0">
+                <div class="topo">
+                    <img src="./imagens/botao-topo.png" alt="botao-topo">
+                </div>
+    
+            </a>
+        </div>
+
+    </section>
+   
+    <script src="./whatsapp-shrink.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init()</script>
+    <script src="./jquery.js"></script>
+    <script src="./scrollit.min.js"></script>
 </body>
 
 </html>
