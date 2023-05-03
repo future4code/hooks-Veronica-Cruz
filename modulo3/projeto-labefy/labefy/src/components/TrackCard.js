@@ -11,6 +11,7 @@ const TrackNameContainer = styled.div`
     margin: 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     border: 1px solid;
     width: 300px;

@@ -7,6 +7,7 @@ import axios from "axios";
 
 const PlaylistDetailsContainer = styled.div`
   h5 {
+    align-items: center;
     text-align: center;
     font-size: 20pt;
   }
@@ -36,6 +37,10 @@ const AddMusicContainer = styled.form`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  
+  input{
+    margin-left: 1rem;
+  }
  
 
    button {
@@ -60,9 +65,21 @@ const PlaylistDetails = (props) => {
   const [trackArtist, setTrackArtist] = useState('')
   const [trackUrl, setTrackUrl] = useState('')
 
+  
+
   useEffect(()=> {
+    
     getPlaylistTracks()
 },[])
+
+const getPlaylistTracks = () =>{
+  axios.get(`${BASE_URL}/${props.playlistId}/tracks`, axiosConfig)
+  .then(res => {
+    setTracks(res.data.result.tracks)
+  })
+  .catch(err => console.error(err))
+}
+
 
   const addTrack = (event) => {
     event.preventDefault()
@@ -83,17 +100,7 @@ const PlaylistDetails = (props) => {
     .catch(err => console.log(err))
   }
 
-  const getPlaylistTracks = () =>{
-    axios.get(`${BASE_URL}/${props.playlistId}/tracks`, axiosConfig)
-    .then(res => {
-      setTracks(res.data.result.tracks)
-    })
-    .catch(err => console.error(err))
-  }
-
-
-
-const removeTrackFromPlaylist = (trackId) => {
+  const removeTrackFromPlaylist = (trackId) => {
   axios.delete(`${BASE_URL}/${props.playlistId}/tracks/${trackId}`, axiosConfig)
   .then(() => {
     alert('Track removed')

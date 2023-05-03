@@ -30,7 +30,8 @@ const PlaylistComponent = (props) => {
         getAllPlaylists()
     },[])
     
-    const deletePlaylist = (playlistId) => {
+    const deletePlaylist = (event, playlistId) => {
+        event.preventDefault();
         axios.delete(`${BASE_URL}/${playlistId}`, axiosConfig)
         .then(() => {
             alert('Playlist successfully deleted')

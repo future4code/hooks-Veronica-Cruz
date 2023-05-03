@@ -6,6 +6,7 @@ const PlaylistCardContainer = styled.div`
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
     border: 1px solid;
     width: 300px;
     height: 50px;
@@ -46,7 +47,7 @@ const PlaylistCard = (props) => {
         <FormDaPlaylist>
              <button onClick={()=> props.showPage('playlistDetails', props.playlistId)}><b>Ver Playlist</b></button>
              <PlaylistCardContainer >{props.playlistName}</PlaylistCardContainer>
-             <button onClick={() => props.deletePlaylist(props.playlistId)}><b>Apagar Playlist</b></button>
+             <button onClick={(event) => props.deletePlaylist(event, props.playlistId)}><b>Apagar Playlist</b></button>
          </FormDaPlaylist>
         
     )
